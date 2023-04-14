@@ -21,10 +21,7 @@ import sys
 
 
 def main(dict):
-    if 'name' in dict:
-        name = dict['name']
-    else:
-        name = "stranger"
-    greeting = "Hello " + name + "!"
+    name = dict['name'] if 'name' in dict else "stranger"
+    greeting = f"Hello {name}!"
     print(greeting)
     return {"greeting": greeting}
